@@ -1,0 +1,86 @@
+*
+  margin: 0
+  padding: 0
+
+html
+  box-sizing: border-box
+  scroll-behavior: smooth
+  body
+    font-family: 'Manrope', sans-serif
+    display: grid
+    place-items: center
+    height: 100vh
+
+form.login
+  width: 300px
+  text-align: center
+
+input
+  display: block
+  width: 100%
+  margin: auto
+  margin-bottom: 40px
+
+h1.welcome
+  text-align: center
+  margin-bottom: 20px
+
+img.logo
+  display: block
+  margin: auto
+
+.floating-label
+  position: relative
+  margin-top: 15px
+  text-align: left
+
+  label.floating
+    position: absolute
+    font-weight: 700
+    color: #D5CECE
+    pointer-events: none
+    // left: 490px
+    top: 10px
+    transition: all .4s ease
+
+  input.userInfo
+    font-family: inherit
+    padding: 10px 0
+    border: transparent
+    border-bottom: 2px solid #B4ABAB
+    transition: .3s ease-in-out
+    background: transparent
+    &:focus
+      outline: none
+      border-bottom: 2px solid #2F7FAF
+    &:valid ~ label.floating
+      top: -8px
+
+  input.userInfo:focus + label.floating,
+  input.userInfo:not(:focus):valid + label.floating
+    top: -8px
+    font-size: 14px
+
+input.login-btn
+  padding: 10px 0
+  border: transparent
+  border-radius: 20px
+  font-family: inherit
+  font-weight: 700
+  color: #fff
+  background: #2F7FAF
+  cursor: pointer
+  transition: .4s ease-in-out
+  &:hover
+    background: transparentize(#2F7FAF, .2)
+
+a
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+
+p.account100
+  text-align: center
+
+a.forgot
+  margin: auto
